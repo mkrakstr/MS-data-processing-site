@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+	<h1>Welcome to the data processing app!</h1>
+
+	<br/>
+	<br/>
+	<div class="shadow p-3 mb-5 bg-body rounded">
+		<h3>Choose data file type:</h3>
+
+		<a href="{{ url_for('custom_data')}}">Custom data</a>
+	</div>
+	<br/><br/>
+	
+
+
+{% endblock %}

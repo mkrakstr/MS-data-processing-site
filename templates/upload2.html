@@ -1,0 +1,28 @@
+
+{%block title%}Upload file {% endblock%}
+
+{% block main %}
+
+<div class ="container">
+   <div class="row">
+      <div class = "col">
+         <h1> Excel file upload </h1>
+         <form action="data" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+            <label> Select file> </label>
+            <div class = "custom-file">
+               <input type="file" class="custom-file-input" name='upload-file'  id="upload-file" >
+               <label class="custom-file-label" for=upload-file> Select file </label>
+            </div>
+         </div>
+      </form>
+   </div>
+</div>
+
+
+   
+
+
+
+
+{% endblock %}

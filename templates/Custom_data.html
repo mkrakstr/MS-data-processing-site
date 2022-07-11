@@ -1,0 +1,59 @@
+{% extends 'base.html'%}
+
+
+   
+{% block content %}
+
+{% for message in get_flashed_messages() %}
+   
+   <div class="alert alert-warning alert-dismissible fade show" role="alert">
+     {{ message }}
+     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+   </div>
+
+   
+{% endfor %}
+
+<div class="card">
+  <div class="card-header">
+    Upload files
+  </div>
+  <div class="card-body">
+
+   <form method="POST" enctype="multipart/form-data">
+      {{ form.hidden_tag() }}
+
+
+      {{ form.upload_file.label(class="form-label") }}
+
+      {{ form.upload_file(class="form-control", value="") }}
+      <br/>
+      
+      {{ form.Internal_standard.label(class="form-label") }}
+
+      {{ form.Internal_standard(class="form-control", value="") }}
+      <br/>
+      {{ form.Sample_metadata.label(class="form-label") }}
+
+      {{ form.Sample_metadata(class="form-control", value="") }}
+      <br/>
+      {{ form.Feature_metadata.label(class="form-label") }}
+
+      {{ form.Feature_metadata(class="form-control", value="") }}
+      <br/>
+      {{ form.submit(class="btn btn-secondary btn-sm") }}
+         
+
+      
+
+
+   </form>
+
+
+
+</div>
+
+
+
+
+{% endblock %}
